@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F01%2F28%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post$ hexo new "测试测试" More info: Writing Run server$ hexo server More info: Server Generate static files$ hexo generate More info: Generating Deploy to remote sites$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[command; exec /usr/bin/bash -c ; fi]]></title>
+    <url>%2F2019%2F01%2F25%2Fcommand-exec-usr-bin-bash-c-fi%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[浅谈 Spring Cloud]]></title>
+    <url>%2F2017%2F01%2F28%2F%E6%B5%85%E8%B0%88-Spring-Cloud%2F</url>
+    <content type="text"><![CDATA[什么是Spring Cloud？要知道什么是Spring Cloud之前，必须知道什么是微服务；简单来说，微服务是一种设计风格，它的主旨是将原本独立的系统拆分成不同的细小的服务，这些细小的服务独自运行，各服务之间通过基于Http Restful API 进行通信协作。而Spring Cloud 则是这种设计风格的实现，Spring Cloud提供了许多灵活简便的组件来让开发者简单快速地实现微服务。 Spring Cloud能为我们做什么？Spring Cloud是一个基于Spring Boot实现的微服务架构开发工具。它为微服务架构中涉及的配置管理，服务治理，断路器，智能路由器，微代理，控制总线，全局锁，决策竞选，分布式会话和集群状态管理等操作提供了一种简单的开发方式。 学习Spring Cloud该如何下手学习Spring Cloud的前提是你已经熟悉SpringBoot；SpringBoot会贯穿整个Spring Cloud开发，所以这是必不可少的。在此前提下，可以到Spring Cloud 中文网 大致了解Spring Cloud家族的各个成员。下面将会简单介绍各成员以及其作用 Spring Cloud Config 配置管理工具，支持Git存储配置内容，可以使用它实现应用配置的外部化存储，并支持客户端配置信息刷新，加密/解密配置内容等。 Spring Cloud Netflix 核心组件，对多个Netflix OSS开源套件进行整合。 Eureka：服务治理组件，包含注册中心，服务注册与发现机制的实现。 Hystrix：容错管理组件，实现断路器模式，帮助服务依赖中出现的延迟和为故障提供强大的容错能力。 Ribbon：客户端负载均衡的服务调用组件。 Feign：基于Ribbon和Hystrix的声明式服务调用组件。 Zuul：网关组件，提供智能路由，访问过滤等功能。 Archaius：外部化配置组件。 Spring Cloud Bus 事件，消息总线，用于传播集群中的状态变化或者事件，以触发后续的处理，例如动态刷新配置等。 Spring Cloud Cluster 针对Zookeeper，Redis，Hazelcast，Consul的选举算法和通用状态模式的实现。 Spring Cloud Cloudfoundry 与Pivotal Cloudfoundry的整合支持 Spring Cloud Consul 服务发现与配置管理工具,封装了Consul操作，consul是一个服务发现与配置工具，与Docker容器可以无缝集成。 Spring Cloud Stream 通过Redis，Rabbit MQ或者Kafka实现消费微服务，可以通过简单的声明式模型来发送和接收消息 Spring Cloud AWS 用于简化整合Amazon Web Service的组件 Spring Cloud Security 安全工具包，提供在Zuul代理中对OAuth2可花旦请求的中继器 Spring Cloud Sleuth Spring Cloud 应用分布式跟踪实现，可以完美整合Zipkin Spring Cloud ZooKeeper 基于ZooKeeper的服务发现与配置管理组件]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+      </tags>
+  </entry>
+</search>
