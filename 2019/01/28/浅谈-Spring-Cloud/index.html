@@ -50,7 +50,7 @@
     
     <title>
         
-            Hello World | 
+            浅谈 Spring Cloud | 
         
         Marco&#39;s Blog
     </title>
@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Spring Cloud">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -246,7 +246,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Marco&#39;s Blog">
-    <meta name="msapplication-starturl" content="https://fantastic-marco.github.io/2019/01/25/hello-world/">
+    <meta name="msapplication-starturl" content="https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Marco&#39;s Blog">
@@ -261,16 +261,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://fantastic-marco.github.io/2019/01/25/hello-world/">
+    <meta property="og:url" content="https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hello World | Marco&#39;s Blog">
+    <meta property="og:title" content="浅谈 Spring Cloud | Marco&#39;s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Spring Cloud"> 
 
     
-        <meta property="article:published_time" content="Fri Jan 25 2019 16:34:09 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jan 28 2019 14:14:05 GMT+0800">
+        <meta property="article:published_time" content="Mon Jan 28 2019 17:03:54 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jan 28 2019 17:35:09 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -278,7 +278,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://fantastic-marco.github.io/2019/01/25/hello-world/index.html">
+        <link rel="canonical" href="https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -290,10 +290,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://fantastic-marco.github.io/2019/01/25/hello-world/index.html",
-    "headline": "Hello World",
-    "datePublished": "Fri Jan 25 2019 16:34:09 GMT+0800",
-    "dateModified": "Mon Jan 28 2019 14:14:05 GMT+0800",
+    "mainEntityOfPage": "https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/index.html",
+    "headline": "浅谈 Spring Cloud",
+    "datePublished": "Mon Jan 28 2019 17:03:54 GMT+0800",
+    "dateModified": "Mon Jan 28 2019 17:35:09 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Marco Ma",
@@ -311,7 +311,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",Spring Cloud",
     "description": "",
 }
 </script>
@@ -376,7 +376,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是Spring-Cloud？"><span class="post-toc-text">什么是Spring Cloud？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-Cloud能为我们做什么？"><span class="post-toc-text">Spring Cloud能为我们做什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#学习Spring-Cloud该如何下手"><span class="post-toc-text">学习Spring Cloud该如何下手</span></a></li></ol>
     </ul>
     
 
@@ -408,7 +408,7 @@
         
     
             <p class="article-headline-p">
-                Hello World
+                浅谈 Spring Cloud
             </p>
         </div>
 
@@ -427,7 +427,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Marco Ma</strong>
-        <span>1月 25, 2019</span>
+        <span>1月 28, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,6 +444,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Spring-Cloud/">Spring Cloud</a>
+    </li></ul>
     
 
     <!-- Share -->
@@ -470,7 +479,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=https://fantastic-marco.github.io/2019/01/25/hello-world/index.html&pic=https://fantastic-marco.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=浅谈 Spring Cloud&url=https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/index.html&pic=https://fantastic-marco.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -479,7 +488,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hello World&url=https://fantastic-marco.github.io/2019/01/25/hello-world/index.html&via=Marco Ma" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=浅谈 Spring Cloud&url=https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/index.html&via=Marco Ma" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -488,7 +497,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://fantastic-marco.github.io/2019/01/25/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -497,7 +506,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://fantastic-marco.github.io/2019/01/25/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://fantastic-marco.github.io/2019/01/28/浅谈-Spring-Cloud/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -522,15 +531,31 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"测试测试"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h3 id="什么是Spring-Cloud？"><a href="#什么是Spring-Cloud？" class="headerlink" title="什么是Spring Cloud？"></a>什么是Spring Cloud？</h3><p>要知道什么是Spring Cloud之前，必须知道什么是微服务；简单来说，微服务是一种设计风格，它的主旨是将原本独立的系统拆分成不同的细小的服务，这些细小的服务独自运行，各服务之间通过基于Http Restful API 进行通信协作。而Spring Cloud 则是这种设计风格的实现，Spring Cloud提供了许多灵活简便的组件来让开发者简单快速地实现微服务。</p>
+<h3 id="Spring-Cloud能为我们做什么？"><a href="#Spring-Cloud能为我们做什么？" class="headerlink" title="Spring Cloud能为我们做什么？"></a>Spring Cloud能为我们做什么？</h3><p>Spring Cloud是一个基于Spring Boot实现的微服务架构开发工具。它为微服务架构中涉及的配置管理，服务治理，断路器，智能路由器，微代理，控制总线，全局锁，决策竞选，分布式会话和集群状态管理等操作提供了一种简单的开发方式。</p>
+<h3 id="学习Spring-Cloud该如何下手"><a href="#学习Spring-Cloud该如何下手" class="headerlink" title="学习Spring Cloud该如何下手"></a>学习Spring Cloud该如何下手</h3><p>学习Spring Cloud的前提是你已经熟悉SpringBoot；SpringBoot会贯穿整个Spring Cloud开发，所以这是必不可少的。<br>在此前提下，可以到<a href="https://springcloud.cc/" title="Spring Cloud 中文网" target="_blank" rel="noopener">Spring Cloud 中文网</a> 大致了解Spring Cloud家族的各个成员。<br>下面将会简单介绍各成员以及其作用</p>
+<ul>
+<li>Spring Cloud Config<br>  配置管理工具，支持Git存储配置内容，可以使用它实现应用配置的外部化存储，并支持客户端配置信息刷新，加密/解密配置内容等。</li>
+<li><p>Spring Cloud Netflix<br>  核心组件，对多个Netflix OSS开源套件进行整合。</p>
+<ol>
+<li>Eureka：服务治理组件，包含注册中心，服务注册与发现机制的实现。</li>
+<li>Hystrix：容错管理组件，实现断路器模式，帮助服务依赖中出现的延迟和为故障提供强大的容错能力。</li>
+<li>Ribbon：客户端负载均衡的服务调用组件。</li>
+<li>Feign：基于Ribbon和Hystrix的声明式服务调用组件。</li>
+<li>Zuul：网关组件，提供智能路由，访问过滤等功能。</li>
+<li>Archaius：外部化配置组件。</li>
+</ol>
+</li>
+<li>Spring Cloud Bus<br>  事件，消息总线，用于传播集群中的状态变化或者事件，以触发后续的处理，例如动态刷新配置等。</li>
+<li>Spring Cloud Cluster<br>  针对Zookeeper，Redis，Hazelcast，Consul的选举算法和通用状态模式的实现。</li>
+<li>Spring Cloud Cloudfoundry<br>  与Pivotal Cloudfoundry的整合支持</li>
+<li>Spring Cloud Consul<br>  服务发现与配置管理工具</li>
+<li>Spring Cloud Stream<br>  通过Redis，Rabbit MQ或者Kafka实现消费微服务，可以通过简单的声明式模型来发送和接收消息</li>
+<li>Spring Cloud AWS<br>  用于简化整合Amazon Web Service的组件</li>
+<li>Spring Cloud Security<br>  安全工具包，提供在Zuul代理中对OAuth2可花旦请求的中继器</li>
+<li>Spring Cloud Sleuth<br>  Spring Cloud 应用分布式跟踪实现，可以完美整合Zipkin</li>
+<li>Spring Cloud ZooKeeper<br>  基于ZooKeeper的服务发现与配置管理组件</li>
+</ul>
 
         
     
@@ -559,7 +584,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        id: 'Fri Jan 25 2019 16:34:09 GMT+0800', // 可选。默认为 location.href
+        id: 'Mon Jan 28 2019 17:03:54 GMT+0800', // 可选。默认为 location.href
         owner: 'Fantastic-Marco',
         repo: 'Fantastic-Marco.github.io',
         oauth: {
@@ -583,6 +608,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2019/01/28/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -668,7 +701,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">3</span></a>
             </li></ul>
         </li>
         
@@ -700,7 +733,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">1</span>
+                <span class="sidebar-badge">3</span>
             </a>
         </li>
         
