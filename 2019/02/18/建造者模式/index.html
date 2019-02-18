@@ -50,7 +50,7 @@
     
     <title>
         
-            浅谈 Spring Cloud | 
+            建造者模式 | 
         
         Marco&#39;s Blog
     </title>
@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Spring Cloud">
+    <meta name="keywords" content=",设计模式,创建型模式">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -246,7 +246,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Marco&#39;s Blog">
-    <meta name="msapplication-starturl" content="https://fantastic-marco.github.io/2017/01/28/浅谈-Spring-Cloud/">
+    <meta name="msapplication-starturl" content="https://fantastic-marco.github.io/2019/02/18/建造者模式/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Marco&#39;s Blog">
@@ -261,16 +261,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://fantastic-marco.github.io/2017/01/28/浅谈-Spring-Cloud/">
+    <meta property="og:url" content="https://fantastic-marco.github.io/2019/02/18/建造者模式/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="浅谈 Spring Cloud | Marco&#39;s Blog">
+    <meta property="og:title" content="建造者模式 | Marco&#39;s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Spring Cloud"> 
+    <meta property="og:article:tag" content="设计模式"> <meta property="og:article:tag" content="创建型模式"> 
 
     
-        <meta property="article:published_time" content="Sat Jan 28 2017 17:03:54 GMT+0800">
-        <meta property="article:modified_time" content="Thu Feb 14 2019 11:11:29 GMT+0800">
+        <meta property="article:published_time" content="Mon Feb 18 2019 16:47:34 GMT+0800">
+        <meta property="article:modified_time" content="Mon Feb 18 2019 18:39:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -278,7 +278,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://fantastic-marco.github.io/2017/01/28/浅谈-Spring-Cloud/index.html">
+        <link rel="canonical" href="https://fantastic-marco.github.io/2019/02/18/建造者模式/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -290,10 +290,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://fantastic-marco.github.io/2017/01/28/浅谈-Spring-Cloud/index.html",
-    "headline": "浅谈 Spring Cloud",
-    "datePublished": "Sat Jan 28 2017 17:03:54 GMT+0800",
-    "dateModified": "Thu Feb 14 2019 11:11:29 GMT+0800",
+    "mainEntityOfPage": "https://fantastic-marco.github.io/2019/02/18/建造者模式/index.html",
+    "headline": "建造者模式",
+    "datePublished": "Mon Feb 18 2019 16:47:34 GMT+0800",
+    "dateModified": "Mon Feb 18 2019 18:39:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Marco Ma",
@@ -311,7 +311,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Spring Cloud",
+    "keywords": ",设计模式,创建型模式",
     "description": "",
 }
 </script>
@@ -376,7 +376,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是Spring-Cloud？"><span class="post-toc-text">什么是Spring Cloud？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-Cloud能为我们做什么？"><span class="post-toc-text">Spring Cloud能为我们做什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#学习Spring-Cloud该如何下手"><span class="post-toc-text">学习Spring Cloud该如何下手</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#建造者模式"><span class="post-toc-text">建造者模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#使命"><span class="post-toc-text">使命</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#优点"><span class="post-toc-text">优点</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#缺点"><span class="post-toc-text">缺点</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -408,7 +408,7 @@
         
     
             <p class="article-headline-p">
-                浅谈 Spring Cloud
+                建造者模式
             </p>
         </div>
 
@@ -427,7 +427,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Marco Ma</strong>
-        <span>1月 28, 2017</span>
+        <span>2月 18, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -451,7 +451,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Spring-Cloud/">Spring Cloud</a>
+        <a class="post_tag-link" href="/tags/创建型模式/">创建型模式</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/设计模式/">设计模式</a>
     </li></ul>
     
 
@@ -479,7 +479,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=浅谈 Spring Cloud&url=https://fantastic-marco.github.io/2017/01/28/浅谈-Spring-Cloud/index.html&pic=https://fantastic-marco.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=建造者模式&url=https://fantastic-marco.github.io/2019/02/18/建造者模式/index.html&pic=https://fantastic-marco.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -494,7 +494,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://fantastic-marco.github.io/2017/01/28/浅谈-Spring-Cloud/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://fantastic-marco.github.io/2019/02/18/建造者模式/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -506,7 +506,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Marco&#39;s Blog&title=浅谈 Spring Cloud&summary=&pics=https://fantastic-marco.github.io/img/favicon.png&url=https://fantastic-marco.github.io/2017/01/28/浅谈-Spring-Cloud/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Marco&#39;s Blog&title=建造者模式&summary=&pics=https://fantastic-marco.github.io/img/favicon.png&url=https://fantastic-marco.github.io/2019/02/18/建造者模式/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -525,42 +525,149 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p><img src="https://i.imgur.com/P3Mq5I5.png" alt=""></p>
-<h3 id="什么是Spring-Cloud？"><a href="#什么是Spring-Cloud？" class="headerlink" title="什么是Spring Cloud？"></a>什么是Spring Cloud？</h3><p>要知道什么是Spring Cloud之前，必须知道什么是微服务；简单来说，微服务是一种设计风格，它的主旨是将原本独立的系统拆分成不同的细小的服务，这些细小的服务独自运行，各服务之间通过基于Http Restful API 进行通信协作。而Spring Cloud 则是这种设计风格的实现，Spring Cloud提供了许多灵活简便的组件来让开发者简单快速地实现微服务。</p>
-<h3 id="Spring-Cloud能为我们做什么？"><a href="#Spring-Cloud能为我们做什么？" class="headerlink" title="Spring Cloud能为我们做什么？"></a>Spring Cloud能为我们做什么？</h3><p>Spring Cloud是一个基于Spring Boot实现的微服务架构开发工具。它为微服务架构中涉及的配置管理，服务治理，断路器，智能路由器，微代理，控制总线，全局锁，决策竞选，分布式会话和集群状态管理等操作提供了一种简单的开发方式。</p>
-<h3 id="学习Spring-Cloud该如何下手"><a href="#学习Spring-Cloud该如何下手" class="headerlink" title="学习Spring Cloud该如何下手"></a>学习Spring Cloud该如何下手</h3><p>学习Spring Cloud的前提是你已经熟悉SpringBoot；SpringBoot会贯穿整个Spring Cloud开发，所以这是必不可少的。<br>在此前提下，可以到<a href="https://springcloud.cc/" title="Spring Cloud 中文网" target="_blank" rel="noopener">Spring Cloud 中文网</a> 大致了解Spring Cloud家族的各个成员。<br>下面将会简单介绍各成员以及其作用</p>
-<ul>
-<li><p>Spring Cloud Config<br>  配置管理工具，支持Git存储配置内容，可以使用它实现应用配置的外部化存储，并支持客户端配置信息刷新，加密/解密配置内容等。</p>
-</li>
-<li><p>Spring Cloud Netflix<br>  核心组件，对多个Netflix OSS开源套件进行整合。</p>
-<ol>
-<li>Eureka：服务治理组件，包含注册中心，服务注册与发现机制的实现。</li>
-<li>Hystrix：容错管理组件，实现断路器模式，帮助服务依赖中出现的延迟和为故障提供强大的容错能力。</li>
-<li>Ribbon：客户端负载均衡的服务调用组件。</li>
-<li>Feign：基于Ribbon和Hystrix的声明式服务调用组件。</li>
-<li>Zuul：网关组件，提供智能路由，访问过滤等功能。</li>
-<li>Archaius：外部化配置组件。</li>
-</ol>
-</li>
-<li><p>Spring Cloud Bus<br>  事件，消息总线，用于传播集群中的状态变化或者事件，以触发后续的处理，例如动态刷新配置等。</p>
-</li>
-<li><p>Spring Cloud Cluster<br>  针对Zookeeper，Redis，Hazelcast，Consul的选举算法和通用状态模式的实现。</p>
-</li>
-<li><p>Spring Cloud Cloudfoundry<br>  与Pivotal Cloudfoundry的整合支持</p>
-</li>
-<li><p>Spring Cloud Consul<br>  服务发现与配置管理工具,封装了Consul操作，consul是一个服务发现与配置工具，与Docker容器可以无缝集成。</p>
-</li>
-<li><p>Spring Cloud Stream<br>  通过Redis，Rabbit MQ或者Kafka实现消费微服务，可以通过简单的声明式模型来发送和接收消息</p>
-</li>
-<li><p>Spring Cloud AWS<br>  用于简化整合Amazon Web Service的组件</p>
-</li>
-<li><p>Spring Cloud Security<br>  安全工具包，提供在Zuul代理中对OAuth2可花旦请求的中继器</p>
-</li>
-<li><p>Spring Cloud Sleuth<br>  Spring Cloud 应用分布式跟踪实现，可以完美整合Zipkin</p>
-</li>
-<li><p>Spring Cloud ZooKeeper<br>  基于ZooKeeper的服务发现与配置管理组件</p>
-</li>
+        <h1 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h1><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1550489866341&amp;di=99eecc45a29db9ee4cc4f785e7e6fc3d&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.yzcdn.cn%2Fupload_files%2F2017%2F09%2F07%2F150475531747374328.jpg%3FimageView2%2F2%2Fw%2F580%2Fh%2F580%2Fq%2F75%2Fformat%2Fjpg" alt=""></p>
+<h6 id="使命"><a href="#使命" class="headerlink" title="使命"></a>使命</h6><p>建造者模式（Builder Pattern）使用多个简单的对象一步一步构建成一个复杂的对象。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<br><br>主要解决在软件系统中，有时候面临着”一个复杂对象”的创建工作，其通常由各个部分的子对象用一定的算法构成；由于需求的变化，这个复杂对象的各个部分经常面临着剧烈的变化，但是将它们组合在一起的算法却相对稳定。</p>
+<h6 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h6><ul>
+<li>拓展性好</li>
+<li>细节把控方便</li>
 </ul>
+<h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h6><ul>
+<li>建造产品必须要有共同点，范围有限制</li>
+<li>内部复杂，类衍生迅速</li>
+</ul>
+<hr>
+<p>老生常谈，继续聊回我们的造车故事，最近造车厂提供了些定制化服务，让客户可以自定义选配各种配件，我们来看看，这是怎么实现的</p>
+<p><img src="https://i.imgur.com/UAMyKz6.png" alt=""></p>
+<p>汽车部件</p>
+<pre><code>public interface Item {
+
+    String name();
+
+    float price();
+
+}
+</code></pre><p>引擎部件</p>
+<pre><code>public interface Engine extends Item {
+
+}
+</code></pre><p>V6引擎</p>
+<pre><code>public class V6Engine implements Engine {
+
+    @Override
+    public String name() {
+        return &quot;V6引擎&quot;;
+    }
+
+    @Override
+    public float price() {
+        return 3_5000.99f;
+    }
+}
+</code></pre><p>V12引擎</p>
+<pre><code>public class V12Engine implements Engine {
+
+    @Override
+    public String name() {
+        return &quot;V12引擎&quot;;
+    }
+
+    @Override
+    public float price() {
+        return 12_0000f;
+    }
+}
+</code></pre><p>配色部件</p>
+<pre><code>public interface Color extends Item {
+
+}
+</code></pre><p>蓝色</p>
+<pre><code>public class ColorBlue implements Color {
+
+    @Override
+    public String name() {
+        return &quot;蓝色配色&quot;;
+    }
+
+    @Override
+    public float price() {
+        return 3000f;
+    }
+}
+</code></pre><p>红色</p>
+<pre><code>public class ColorRed implements Color {
+
+    @Override
+    public String name() {
+        return &quot;红色配色&quot;;
+    }
+
+    @Override
+    public float price() {
+        return 2000f;
+    }
+}
+</code></pre><p>汽车</p>
+<pre><code>public class Car {
+    private String name;
+    private List&lt;Item&gt; items = new LinkedList&lt;&gt;();
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * 添加汽车配件
+     *
+     * @param item
+     */
+    public void addItem(Item item) {
+        items.add(item);
+    }
+
+    public String getInfo() {
+        String allItem = &quot;&quot;;
+        float price = 0.0f;
+        for (Item item : items) {
+            allItem += item.name() + &quot; &quot;;
+            price += item.price();
+        }
+        return name + &quot; 的所有部件为：&quot; + allItem + &quot; 价格为： &quot; + price;
+    }
+}
+</code></pre><p>汽车建造者</p>
+<pre><code>public class CarBuilder {
+
+    public Car getV6RedCar() {
+        Car v6 = new Car();
+        v6.setName(&quot;红魔&quot;);
+        Item engine = new V6Engine();
+        Item red = new ColorRed();
+        v6.addItem(engine);
+        v6.addItem(red);
+        return v6;
+    }
+
+    public Car getV12BlueCar() {
+        Car v12 = new Car();
+        v12.setName(&quot;蓝军&quot;);
+        Item engine = new V12Engine();
+        Item red = new ColorBlue();
+        v12.addItem(engine);
+        v12.addItem(red);
+        return v12;
+    }
+}
+</code></pre><p>客户开始选择定制化车辆</p>
+<pre><code>public static void main(String[] args) {
+    CarBuilder builder = new CarBuilder();
+    Car v6 = builder.getV6RedCar();
+    Car v12 = builder.getV12BlueCar();
+
+    System.out.println(v6.getInfo());
+
+    System.out.println(v12.getInfo());
+}
+</code></pre><p>和工厂模式对比，工厂模式更注重整体的生产，而建造者模式更注重细节把控，后者会更灵活，但是也会是整体架构复杂化，这两者是针对不同的场景，切勿混淆使用。</p>
 
         
     
@@ -603,19 +710,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/01/29/设计模式-前言/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2019/02/18/原型模式/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
