@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[原型模式]]></title>
+    <url>%2F2019%2F02%2F18%2F%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[原型模式 使命原型模式（Prototype Pattern）是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。 这种模式是实现了一个原型接口，该接口用于创建当前对象的克隆。当直接创建对象的代价比较大时，则采用这种模式。例如，一个对象需要在一个高代价的数据库操作之后被创建。我们可以缓存该对象，在下一个请求时返回它的克隆，在需要的时候更新数据库，以此来减少数据库调用。 优点 性能提高 逃避构造函数的约束 缺点 配备克隆方法需要对类的功能进行通盘考虑，这对于全新的类不是很难，但对于已有的类不一定很容易，特别当一个类引用不支持串行化的间接对象，或者引用含有循环结构的时候 必须实现 Cloneable 接口 克隆羊多莉的故事，想必都听过了吧，原型模式其实主要思想就是实现 Cloneable 接口，实现实例对象的克隆，从而实现高效的对象创建，但是这个高效并不是所有效率都高于直接创建，当创建代价较大才采用这种方式会比较合适 绵羊 public class Sheep implements Cloneable { private String name; private int age; public void setName(String name) { this.name = name; } public void setAge(int age) { this.age = age; } public Sheep(String name, int age) { this.name = name; this.age = age; } @Override protected Object clone() { Object o = null; try { o = super.clone(); } catch (CloneNotSupportedException e) { e.printStackTrace(); } return o; } @Override public String toString() { return &quot;name:&quot; + name + &quot; age:&quot; + age; } } 开始克隆 public static void main(String[] args) { Sheep sheep = new Sheep(&quot;A&quot;, 3); Sheep dolly = (Sheep) sheep.clone(); dolly.setName(&quot;Dolly&quot;); dolly.setAge(1); System.out.println(sheep); System.out.println(dolly); } 核心思想很简单，但是不要滥用这种方式来创建实例，优点缺点以及它要解决的目的掌握之后才能更好地使用这张牌]]></content>
+      <categories>
+        <category>设计模式</category>
+        <category>创建型模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>创建型模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[模板方法模式]]></title>
+    <url>%2F2019%2F02%2F18%2F%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[模板方法模式 使命模板方法（Template Method Pattern）简单来说和抽象类继承雷同，需要注意的点是，模板方法抽象类定义了部分抽象方法，由子类实现，子类的执行结果影响父类的结果，也就是子类对父类产生了影响 优点 封装不变部分，拓展可变部分 提取公共代码，便于维护 行为由父类控制，子类实现 缺点 和继承的思想有点颠倒 继工厂模式后，我们知道现有一个造汽车的工厂，能量产各种汽车，而这些汽车是怎么生产的呢？结合实际来看，其实每辆车都是基于某个平台来生产的，而这种平台我们称之为模板，来看看例子。 奔驰汽车生产平台（模板） public abstract class Benz { public abstract void start(); public abstract boolean isTurbo(); public abstract void turboSound(); public void run(){ this.start(); if (isTurbo()){ this.turboSound(); } } } C200 public class C200 extends Benz { @Override public void start() { System.out.println(&quot;C200 开始启动啦&quot;); } @Override public boolean isTurbo() { return true; } @Override public void turboSound() { System.out.println(&quot;C200 涡轮声，wow,wow,wow......&quot;); } } CLA public class CLA extends Benz { @Override public void start() { System.out.println(&quot;CLA 启动啦&quot;); } @Override public boolean isTurbo() { return false; } @Override public void turboSound() { } } 开始生产 public class Client { public static void main(String[] args) { C200 c200 = new C200(); c200.run(); CLA cla = new CLA(); cla.run(); } } 整个例子看起来并不复杂，甚至可以说就是简单的继承的做法，从这个例子可以看出子类的实现可以改变父类的模板方法执行结果，我们称isTurbo这种类型的方法为钩子方法（Hook Method），有了钩子方法的模板方法才算完美。]]></content>
+      <categories>
+        <category>设计模式</category>
+        <category>创建型模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>创建型模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[抽象工厂模式]]></title>
     <url>%2F2019%2F02%2F15%2F%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[抽象工厂模式 使命抽象工厂模式（Abstract Factory Pattern）的出现也是为了解决接口选择问题，它不同于工厂模式的是抽象工厂模式是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。 继工厂模式之后能生产不同车辆的工厂升级了，它的能力增强了，它能造飞机了，那么我们是如何让原有的工厂升级为超级工厂的呢？ 客户调用是先选择工厂再生产出目标产物 public class Client { public static void main(String[] args) { FactoryProductor productor = new FactoryProductor(); //获取汽车工厂 AbstractFactory vehicleFactory = productor.getFactory(&quot;VEHICLE&quot;); //生产宝马 IVehicle bmw = vehicleFactory.productVehicle(&quot;BMW&quot;); bmw.whistle(); bmw.drive(); System.out.println(&quot;-----------------------------------&quot;); //获取飞机工厂 AbstractFactory planeFactory = productor.getFactory(&quot;PLANE&quot;); //生产波音747 IPlane boyin747 = planeFactory.productPlane(&quot;BOYIN&quot;); boyin747.whistle(); boyin747.fly(); } } 超级工厂，生产工厂的工厂 public class FactoryProductor { public AbstractFactory getFactory(String name) { AbstractFactory factory = null; if (&quot;PLANE&quot;.equals(name)) { factory = new PlaneFactory(); } else if (&quot;VEHICLE&quot;.equals(name)) { factory = new VehicleFactory(); } return factory; } } 工厂父类 public abstract class AbstractFactory { /** * 生产汽车 * * @return */ public abstract IVehicle productVehicle(String name); /** * 生产飞机 * * @param name * @return */ public abstract IPlane productPlane(String name); } 汽车工厂 public class VehicleFactory extends AbstractFactory { @Override public IVehicle productVehicle(String name) { IVehicle vehicle = null; if (&quot;BENZ&quot;.equals(name)){ vehicle = new Benz(); }else if(&quot;BMW&quot;.equals(name)){ vehicle = new BMW(); }else if (&quot;AUDI&quot;.equals(name)){ vehicle = new Audi(); } return vehicle; } @Override public IPlane productPlane(String name) { return null; } } 汽车接口 public interface IVehicle { /** * 鸣笛 */ void whistle(); /** * 行驶 */ void drive(); } 宝马 public class BMW implements IVehicle { @Override public void whistle() { System.out.println(&quot;宝马在鸣笛......&quot;); } @Override public void drive() { System.out.println(&quot;宝马在行驶......&quot;); } } 飞机工厂 public class PlaneFactory extends AbstractFactory { @Override public IVehicle productVehicle(String name) { return null; } @Override public IPlane productPlane(String name) { IPlane plane = null; if (&quot;BOYIN&quot;.equals(name)){ plane = new Boyin(); }else if(&quot;JIAN20&quot;.equals(name)){ plane = new Jian20(); } return plane; } } 飞机接口 public interface IPlane { /** * 鸣笛 */ void whistle(); /** * 行驶 */ void fly(); } 波音747 public class Boyin implements IPlane { @Override public void whistle() { System.out.println(&quot;波音747在鸣笛......&quot;); } @Override public void fly() { System.out.println(&quot;波音747在飞行......&quot;); } }]]></content>
